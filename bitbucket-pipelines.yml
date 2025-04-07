@@ -1,0 +1,15 @@
+image: maven:3.6.3
+
+pipelines:
+  default:
+    - parallel:
+      - step:
+          name: Build and Test
+          caches:
+            - maven
+          script:
+            - |
+              echo 'Running tests'
+              mvn -DtestFailureIgnore=true test
+              curl -H "accept:application/json" -H "Authorization:AioAuth NGE2M2UxMmUtOWVhZS00YmJkLTgwMzktZGYxYWNiYWFhMzEx" -H "Content-Type:multipart/form-data" -F "createNewRun=true" -F "addCaseToCycle=true" -F "createCase=true" -F "bddForceUpdateCase=true" -F "file=@target/cucumber-reports/Cucumber_TempTracker.json;type=application/json" -X POST "https://tcms.aiojiraapps.com/aio-tcms/api/v1/project/$JIRA_PROJ/testcycle/$AIO_CYCLE/import/results?type=Cucumber"
+              echo 'Done'

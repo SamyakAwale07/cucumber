@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2021. [Navarambh Software Pvt. Ltd]
+  -->
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Global Warming tracker">
+  <test name="Test">
+    <classes>
+      <class name="com.aiotests.samples.runner.MainRunner"/>
+        <class name="com.aiotests.samples.runner.AnotherRunner"/>
+     </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
