@@ -38,4 +38,10 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+      - name: Echo provided inputs
+        run: |
+          echo "🌍 Environment: ${{ github.event.inputs.environment }}"
+          echo "✅ Confirm Deploy: ${{ github.event.inputs.confirm_deploy }}"
+          echo "📦 Release Version: ${{ github.event.inputs.release_version }}"
+          echo "📡 Deployment Region: ${{ github.event.inputs.deployment_region }}"
       - run: echo "🍏 This job's status is ${{ job.status }}."
