@@ -1,6 +1,29 @@
 name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: environment
+        description: 'Select an environment'
+        required: true
+      confirm_deploy:
+        type: boolean
+        description: 'Are you sure you want to deploy?'
+        default: false
+      release_version:
+        type: string
+        description: 'Version to release'
+        required: true
+        default: '1.0.0'
+      deployment_region:
+        type: choice
+        description: 'Choose a region'
+        options:
+          - us-east
+          - us-west
+          - eu-central
+        default: us-east
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
@@ -15,4 +38,10 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+      - name: Echo provided inputs
+        run: |
+          echo "🌍 Environment: ${{ github.event.inputs.environment }}"
+          echo "✅ Confirm Deploy: ${{ github.event.inputs.confirm_deploy }}"
+          echo "📦 Release Version: ${{ github.event.inputs.release_version }}"
+          echo "📡 Deployment Region: ${{ github.event.inputs.deployment_region }}"
       - run: echo "🍏 This job's status is ${{ job.status }}."
