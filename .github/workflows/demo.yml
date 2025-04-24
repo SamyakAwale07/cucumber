@@ -25,7 +25,7 @@ on:
           - eu-central
         default: us-east
       current_version:
-        type: integer
+        type: number
         description: 'Version to release'
         required: true
 jobs:
