@@ -27,7 +27,32 @@ on:
       current_version:
         type: number
         description: 'Version to release'
-        required: true
+      dummy_1:
+        type: number
+        description: 'Version to release'
+      dummy_2:
+        type: number
+        description: 'Version to release'
+      dummy_3:
+        type: number
+        description: 'Version to release'
+      dummy_4:
+        type: number
+        description: 'Version to release'
+      dummy_5:
+        type: number
+        description: 'Version to release'
+      dummy_6:
+        type: number
+        description: 'Version to release'
+      dummy_7:
+        type: number
+        description: 'Version to release'
+      dummy_8:
+        type: number
+      dummy_9:
+        type: number
+        
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
