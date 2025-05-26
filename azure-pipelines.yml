@@ -22,8 +22,8 @@ steps:
 - task: AIOTests@0
   inputs:
     jiraHosting: 'cloud'
-    cloudAuth: 'ZWUwNDYxZjMtZjJhNC0zNTI3LWJjMTItNDdiNDk5M2RiMGMwLmM0ZWM1NzFiLTU3OTYtNDA4OS04OTgyLTQxYjgxOWM4OThkMg=='
-    projectKey: 'SP'
+    cloudAuth: 'NTFiMmVlYzQtOTNhMi0zMTkyLTk1MTYtMjZlMmZlNjQ3ZjAxLjQ3YWNmMThiLTk1ZmQtNDdjOC1hMzkxLTAzNTJlNWRkMWY1Mw=='
+    projectKey: 'TSP'
     cylePreferences: 'newCycle'
     cycleTitle: 'AZURE'
     batchImport: true
