@@ -28,7 +28,7 @@ steps:
     cycleTitle: 'AZURE'
     batchImport: true
     frameworkOptions: 'cucumber'
-    resultsFilePath: '**/cucumber-reports/*.json'
+    resultsFilePath: '/target/cucumber-reports/Cucumber_Login.json'
     createNewRun: true
     addCaseToCycle: true
     defaultFolder: 'AZURE'
