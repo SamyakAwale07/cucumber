@@ -31,5 +31,6 @@ steps:
     resultsFilePath: '/Users/ASUS/Downloads/vsts-agent-win-x64-4.255.0/_work/1/s/target/cucumber-reports/Cucumber_Login.json'
     createNewRun: true
     addCaseToCycle: true
+    createCase: true
     defaultFolder: 'AZURE'
     updateOnlyRunStatus: true
