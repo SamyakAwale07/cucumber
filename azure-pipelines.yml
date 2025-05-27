@@ -32,5 +32,3 @@ steps:
     createNewRun: true
     addCaseToCycle: true
     createCase: true
-    defaultFolder: 'AZURE'
-    updateOnlyRunStatus: true
